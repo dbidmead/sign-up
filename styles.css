@@ -90,6 +90,22 @@ body {
     padding-left: 1.5rem;
 }
 
+.valid-input {
+    color: var(--dark);
+}
+
+.valid-input:focus {
+    outline-color: var(--green);
+}
+
+#sign-up .invalid-input {
+    color: var(--red);
+}
+
+.invalid-input:focus {
+    outline-color: var(--red);
+}
+
 .input-container {
     display: flex;
     flex-direction: column;

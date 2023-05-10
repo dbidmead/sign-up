@@ -94,6 +94,8 @@ firstNameInput.addEventListener('input', () => {
         firstNameError.innerHTML = '';
         firstValidIcon.setAttribute('style', 'opacity: 1');
         firstInvalidIcon.setAttribute('style', 'opacity: 0');
+        firstNameInput.classList.add('valid-input');
+        firstNameInput.classList.remove('invalid-input');
         console.log('valid');
     } else {
         // first name is invalid
@@ -105,6 +107,8 @@ firstNameInput.addEventListener('input', () => {
         };
         firstValidIcon.setAttribute('style', 'opacity: 0');
         firstInvalidIcon.setAttribute('style', 'opacity: 1');
+        firstNameInput.classList.add('invalid-input');
+        firstNameInput.classList.remove('valid-input');
         console.log(firstNameErrorType.type);
     } 
 })
@@ -116,6 +120,8 @@ lastNameInput.addEventListener('input', () => {
         lastNameError.innerHTML = '';
         lastValidIcon.setAttribute('style', 'opacity: 1');
         lastInvalidIcon.setAttribute('style', 'opacity: 0');
+        lastNameInput.classList.add('valid-input');
+        lastNameInput.classList.remove('invalid-input');
         console.log('valid');
     } else {
         // last name is invalid
@@ -126,7 +132,10 @@ lastNameInput.addEventListener('input', () => {
             lastNameError.innerHTML = 'Last Name must only contain letters';
         };
         lastValidIcon.setAttribute('style', 'opacity: 0');
-        lastInvalidIcon.setAttribute('style', 'opacity: 1');console.log(lastNameErrorType.type);
+        lastInvalidIcon.setAttribute('style', 'opacity: 1');
+        lastNameInput.classList.add('invalid-input');
+        lastNameInput.classList.remove('valid-input');
+        console.log(lastNameErrorType.type);
     }
 })
 
@@ -136,12 +145,16 @@ emailInput.addEventListener('input', () => {
         emailError.setAttribute('style', 'opacity: 0');
         emailValidIcon.setAttribute('style', 'opacity: 1');
         emailInvalidIcon.setAttribute('style', 'opacity: 0');
+        emailInput.classList.add('valid-input');
+        emailInput.classList.remove('invalid-input');
         console.log('valid');
     } else {
         // email is invalid
         emailError.setAttribute('style', 'opacity: 1');
         emailValidIcon.setAttribute('style', 'opacity: 0');
         emailInvalidIcon.setAttribute('style', 'opacity: 1');
+        emailInput.classList.add('invalid-input');
+        emailInput.classList.remove('valid-input');
         console.log('invalid');
     } 
 })
@@ -153,6 +166,8 @@ passwordInput.addEventListener('input', () => {
         passwordError.innerHTML = '';
         passwordValidIcon.setAttribute('style', 'opacity: 1');
         passwordInvalidIcon.setAttribute('style', 'opacity: 0');
+        passwordInput.classList.add('valid-input');
+        passwordInput.classList.remove('invalid-input');
         console.log('Valid');
     } else {
         // password is invalid
@@ -186,6 +201,8 @@ passwordInput.addEventListener('input', () => {
         }
         passwordValidIcon.setAttribute('style', 'opacity: 0');
         passwordInvalidIcon.setAttribute('style', 'opacity: 1');
+        passwordInput.classList.add('invalid-input');
+        passwordInput.classList.remove('valid-input');
         console.log('invalid')
     } 
 })
