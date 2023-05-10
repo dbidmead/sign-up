@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark: hsl(249, 10%, 26%) ;
+    --grey: hsl(246, 25%, 77%);
+}
+
+*:focus {
+    outline: 1px solid var(--blue);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--red);
+}
+
+.content-wrapper {
+    display: flex;
+    width: 1110px;
+    height: 560px;
+    align-items: center;
+}
+
+.text-half {
+    color: white;
+    width: 50%;
+    padding-right: 70px;
+}
+
+.text-half h1 {
+    font-size: 50px;
+    margin: 0;
+    line-height: 1.25em;
+}
+
+.form-half {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.price-box {
+    color: white;
+    background-color: var(--blue);
+    height: 3.75em;
+    line-height: 3.75em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.form-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    padding: 2.5rem;
+}
+
+#sign-up {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#sign-up input {
+    font-size: 1em;
+    font-family: inherit;
+    color: var(--dark);
+    font-weight: 500;
+    height: 3em;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    padding-left: 1.5rem;
+}
+
+#submit-button {
+    color: white;
+    font-family: inherit;
+    background-color: var(--green);
+    border: none;
+    height: 3.75rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.form-footer {
+    font-size: 11px;
+    text-align: center;
+    color: var(--grey);
+}
+
+.form-footer a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--red);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    width: 100vw;
+    color: white;
+}
+
+.attribution a { 
+    color: var(--green); 
+    font-weight: 600;
+    text-decoration: none;
+}
