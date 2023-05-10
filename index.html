@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
+  <script src='https://kit.fontawesome.com/cc3b4bbf04.js' crossorigin='anonymous'></script>
   
   <title>Sign Up</title>
 </head>
@@ -21,11 +22,35 @@
         <b>Try it free 7 days</b> then $20/mo. thereafter
       </div>
       <div class="form-container">
-        <form action="/" id="sign-up">
-          <input type="text" id="first-name" placeholder="First Name">
-          <input type="text" id="last-name" placeholder="Last Name">
-          <input type="email" id="email" placeholder="Email Address">
-          <input type="password" id="password" placeholder="Password">
+        <form action="/" id="sign-up" novalidate>
+          <div class="input-container" id="first-container">
+            <input type="text" id="first-name" placeholder="First Name">
+            <span class="error-text" id="first-error">First Name cannot be empty</span>
+            <i class="fa-solid fa-circle-exclamation fa-xl invalid" id="first-invalid"></i>
+            <i class="fa-solid fa-circle-check fa-xl valid" id="first-valid"></i>
+          </div>
+
+          <div class="input-container" id="last-container">
+            <input type="text" id="last-name" placeholder="Last Name">
+            <span class="error-text" id="last-error">Last Name cannot be empty</span>
+            <i class="fa-solid fa-circle-exclamation fa-xl invalid" id="last-invalid"></i>
+            <i class="fa-solid fa-circle-check fa-xl valid" id="last-valid"></i>
+          </div>
+          <div class="input-container" id="email-container">
+            <input type="email" id="email" placeholder="Email Address">
+            <span class="error-text" id="email-error">Enter a valid email address</span>
+            <i class="fa-solid fa-circle-exclamation fa-xl invalid" id="email-invalid"></i>
+            <i class="fa-solid fa-circle-check fa-xl valid" id="email-valid"></i>
+          </div>
+          <div class="input-container" id="password-container">
+            <input type="password" id="password" placeholder="Password">
+            <span class="error-text" id="password-error">Password cannot be empty</span>
+            <i class="fa-solid fa-circle-exclamation fa-xl invalid" id="password-invalid"></i>
+            <i class="fa-solid fa-circle-check fa-xl valid" id="password-valid"></i>
+          </div>
+          
+          
+          
           <button type="submit" id="submit-button">CLAIM YOUR FREE TRIAL</button>
         </form>
         <p class="form-footer">
@@ -40,6 +65,7 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/dbidmead">Drew Bidmead</a>.
     </p>
+    <script src="./app.js"></script>
   </footer>
 </body>
 </html>

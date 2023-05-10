@@ -86,8 +86,47 @@ body {
     font-weight: 500;
     height: 3em;
     border-radius: 5px;
-    border: 1px solid var(--grey);
+    border: 1px solid #d4d1d1;
     padding-left: 1.5rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-style: italic;
+    position: relative;
+}
+
+.error-text {
+    font-size: 11px;
+    color: var(--red);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(1.5em);
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.valid {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--green);
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.invalid {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--red);
+    opacity: 0;
+    transition: all 0.2s ease;
 }
 
 #submit-button {
@@ -99,6 +138,11 @@ body {
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 500;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+    background-color: hsl(153, 74%, 69%);
 }
 
 .form-footer {
