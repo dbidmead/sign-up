@@ -208,10 +208,10 @@ passwordInput.addEventListener('input', () => {
 })
 
 form.addEventListener('submit', (e) => {
-    if(!isNameValid(firstNameInput.value) ||
-        !isNameValid(lastNameInput.value) ||
+    if(!isNameValid(firstNameInput.value, firstNameErrorType) ||
+        !isNameValid(lastNameInput.value, lastNameErrorType) ||
         !isEmailValid(emailInput.value) ||
-        !isPasswordValid(passwordInput.value)) {
+        !isPasswordValid(passwordInput.value, passwordErrorType)) {
             e.preventDefault();
         }
     else return
