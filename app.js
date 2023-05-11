@@ -74,7 +74,6 @@ const isPasswordValid = (inputValue, err) => {
                         break;
                     case 3:
                         err.type.push('needs special character');
-                        console.log(err.type);
                         break;
                 }
             }
