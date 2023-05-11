@@ -83,10 +83,10 @@ const nameRegEx = /^[A-Za-z]+$/; //alphabetical characters only
 const emailRegEx = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/; //general email
 
 const passRegEx = [
-    /[A-Z]/, //require 1+ uppercase rule
-    /[a-z]/, //require 1+ lowercase rule
-    /[0-9]/, //require 1+ number rule
-    /[!@#$%^&*]/ //require 1+ special character rule
+    /[A-Z]/, //require 1+ uppercase
+    /[a-z]/, //require 1+ lowercase
+    /[0-9]/, //require 1+ number
+    /[!@#$%^&*]/ //require 1+ special character
 ];
 ```
 The accompanying validation logic is below.
@@ -120,7 +120,6 @@ const isPasswordValid = (inputValue, err) => {
     err.type.length = 0;
     if(inputValue.length <= 8) {
         err.type.push('length');
-        console.log('too short');
         return false;
     } else {
         passRegEx.forEach((regEx, index) => {
@@ -139,7 +138,6 @@ const isPasswordValid = (inputValue, err) => {
                         break;
                     case 3:
                         err.type.push('needs special character');
-                        console.log(err.type);
                         break;
                 }
             }
