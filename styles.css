@@ -184,7 +184,103 @@ body {
 }
 
 .attribution a { 
-    color: var(--green); 
+    color: var(--blue); 
     font-weight: 600;
     text-decoration: none;
+}
+
+@media (max-width: 1110px) {
+    body {
+        background-image: url(./images/bg-intro-mobile.png);
+        font-size: 14px;
+        margin: 5rem 0;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        width: 325px;
+        height: 850px;
+    }
+    
+    .text-half {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .text-half h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .text-half p {
+        text-align: center;
+        padding: 0 1.4em;
+    }
+    
+    .form-half {
+        width: 100%;
+        height: auto;
+    }
+    
+    .price-box {
+        height: 3.75em;
+        line-height: 1.5em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 3em;
+    }
+    
+    .form-container {
+        padding: 2rem;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+    
+    #sign-up {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    #sign-up input {
+        font-size: 1em;
+        font-family: inherit;
+        color: var(--dark);
+        font-weight: 500;
+        height: 3em;
+        border-radius: 5px;
+        border: 1px solid #d4d1d1;
+        padding-left: 1.5rem;
+    }
+    
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-style: italic;
+        position: relative;
+    }
+    
+    .error-text {
+        font-size: 8px;
+        width: 100vw;
+    }
+    
+    #submit-button {
+        font-size: 14px;
+        height: 3.5rem;
+    }
+
+    .form-footer {
+        line-height: 1.75em;
+    }
+    
+    .attribution { 
+        bottom: -65px;
+    }
+
 }
