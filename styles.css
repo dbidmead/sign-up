@@ -280,7 +280,7 @@ body {
     }
     
     .attribution { 
-        bottom: -65px;
+        display: none;
     }
 
 }
